@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Firebase SDK -->
+
+    <title>Plug&Save</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="userInfo">
+            <div id="loading">
+                <div class="spinner"></div>
+            </div>
+            <div id="userContent" style="display: none;">
+                <h1>Welcome, <span id="userEmail"></span>!</h1>
+            </div>
+        </div>
+
+        <div id="devicesSection">
+            <h2>Your Devices</h2>
+            <div id="devicesList">
+                <div id="devicesLoading">Loading devices...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button onclick="switchToDash()" class="nav-button">
+            <span>Dashboard</span>
+        </button>
+        <button onclick="switchToAddDev()" class="nav-button">
+            <span>Add Device</span>
+        </button>
+        <button onclick="logout()" class="nav-button">
+            <span>Logout</span>
+        </button>
+    </nav>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 
